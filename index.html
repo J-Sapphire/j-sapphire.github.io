@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALEB KACHE — Teaching & Building</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2A4A;
+    --paper:#EFEAE0;
+    --paper-2:#E5DFD1;
+    --gold:#B8863B;
+    --teal:#2F5D62;
+    --charcoal:#26262A;
+    --line:#D8D0BE;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--charcoal);
+    font-family:'Work Sans', sans-serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  h1,h2,h3{
+    font-family:'Lora', serif;
+    color:var(--ink);
+    margin:0;
+    font-weight:600;
+  }
+  a{color:var(--teal);}
+
+  /* Hero */
+  header.hero{
+    padding:90px 0 60px;
+  }
+  .eyebrow{
+    font-size:15px;
+    color:var(--teal);
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:40px;
+    line-height:1.25;
+    max-width:600px;
+  }
+  .underline-wrap{position:relative; display:inline-block;}
+  .tagline{
+    margin-top:22px;
+    font-size:19px;
+    color:var(--charcoal);
+    max-width:560px;
+  }
+  .tagline svg{
+    display:block;
+    margin-top:6px;
+    width:220px;
+    height:12px;
+  }
+  .contact-line{
+    margin-top:28px;
+    font-size:15px;
+    color:#5b5b5b;
+  }
+  .contact-line span{margin-right:18px;}
+
+  /* Section structure */
+  section{
+    padding:44px 0;
+    border-top:1px solid var(--line);
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:26px;
+  }
+  .tag{
+    font-family:'Work Sans', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    padding:3px 10px;
+    border-radius:3px;
+    color:#fff;
+    letter-spacing:0.02em;
+  }
+  .tag.teach{background:var(--gold);}
+  .tag.build{background:var(--teal);}
+  h2{font-size:24px;}
+
+  p.lead{
+    max-width:600px;
+    color:#3c3c3c;
+  }
+
+  /* Entries */
+  .entry{
+    margin-bottom:26px;
+    padding-left:18px;
+    border-left:2px solid var(--line);
+  }
+  .entry-title{
+    font-family:'Lora', serif;
+    font-weight:600;
+    font-size:18px;
+    color:var(--ink);
+  }
+  .entry-context{
+    font-size:14px;
+    color:#6b6b6b;
+    font-style:italic;
+    margin-bottom:8px;
+  }
+  .entry ul{
+    margin:8px 0 0;
+    padding-left:18px;
+  }
+  .entry li{margin-bottom:5px;}
+
+  /* Project cards */
+  .projects{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .project-card{
+    border:1px solid var(--line);
+    background:var(--paper-2);
+    padding:18px 20px;
+    border-radius:2px;
+  }
+  .project-card h3{
+    font-size:17px;
+    margin-bottom:6px;
+  }
+  .project-card .lang{
+    display:inline-block;
+    font-size:12px;
+    color:var(--teal);
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .project-card p{
+    font-size:14.5px;
+    color:#454545;
+    margin:0 0 10px;
+  }
+  .project-card a{
+    font-size:14px;
+    font-weight:600;
+  }
+  .project-card.concept{
+    border-style:dashed;
+    background:transparent;
+  }
+
+  /* Skills */
+  .skill-groups{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+  .skill-groups h3{
+    font-size:15px;
+    text-transform:none;
+    margin-bottom:10px;
+    color:var(--teal);
+  }
+  .skill-groups ul{
+    margin:0;
+    padding-left:18px;
+    font-size:15px;
+    color:#3c3c3c;
+  }
+  .skill-groups li{margin-bottom:5px;}
+
+  footer{
+    padding:50px 0 70px;
+    border-top:1px solid var(--line);
+    font-size:14.5px;
+    color:#5b5b5b;
+  }
+  footer a{font-weight:600;}
+
+  @media (max-width:600px){
+    h1{font-size:30px;}
+    .projects, .skill-groups{grid-template-columns:1fr;}
+    header.hero{padding:60px 0 40px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">HAWASSA, ETHIOPIA</div>
+    <h1>KALEB KACHE</h1>
+    <div class="tagline">
+      <div class="underline-wrap">
+        Teaches English with patience. Builds the tools to scale it.
+        <svg viewBox="0 0 220 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 8C40 2 80 10 110 6C140 2 180 10 218 5" stroke="#B8863B" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <div class="contact-line">
+      <span>joelkache.eyu@gmail.com</span>
+      <span>+251949396934</span>
+      <span><a href="https://github.com/J-Sapphire">github.com/J-Sapphire</a></span>
+    </div>
+  </header>
+
+  <section>
+    <p class="lead">
+      Native-level English speaker and 4th-year Information Systems student, currently splitting time between one-on-one English tutoring and building software — including the technical tools that could make teaching itself easier to scale.
+    </p>
+  </section>
+
+  <section id="teaching">
+    <div class="section-head">
+      <span class="tag teach">Teaching</span>
+      <h2>Where I've taught</h2>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title">Private English Tutor — One-on-One</div>
+      <div class="entry-context">Independent · ~1 year</div>
+      <ul>
+        <li>Built a student's spoken and conversational English from the ground up over one year, using a communicative, conversation-first approach.</li>
+        <li>Prepared her to a strong functional level — she relocated to China for study without needing a supplementary language school.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title">Private English Tutor — Young Learners & Family</div>
+      <div class="entry-context">Independent</div>
+      <ul>
+        <li>Delivered engaging, age-appropriate lessons to two younger students, focused on vocabulary and speaking confidence.</li>
+        <li>Taught siblings English from beginner level to full fluency through consistent, informal instruction.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="building">
+    <div class="section-head">
+      <span class="tag build">Building</span>
+      <h2>What I've built</h2>
+    </div>
+
+    <div class="projects">
+      <div class="project-card">
+        <span class="lang">Python</span>
+        <h3>gpa-calculator-bot</h3>
+        <p>A GPA calculation tool — early groundwork related to my interest in academic tools for students.</p>
+        <a href="https://github.com/J-Sapphire/gpa-calculator-bot">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <span class="lang">Dart</span>
+        <h3>Amharic-Bible</h3>
+        <p>A Dart-based project working with Amharic scripture content.</p>
+        <a href="https://github.com/J-Sapphire/Amharic-Bible">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <span class="lang">JavaScript</span>
+        <h3>Music Player</h3>
+        <p>Built during a software development internship at CodeAlpha.</p>
+        <a href="https://github.com/J-Sapphire/Music-Player">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <span class="lang">JavaScript</span>
+        <h3>Calculator Web App</h3>
+        <p>An HTML/CSS/JS calculator built during the same CodeAlpha internship.</p>
+        <a href="https://github.com/J-Sapphire/CodeAlpha-Calculator">View on GitHub →</a>
+      </div>
+
+      <div class="project-card concept">
+        <span class="lang">React / Vite</span>
+        <h3>Speed-Learning App <em style="font-size:13px; color:#7a7a7a;">(in progress)</em></h3>
+        <p>An original active-recall study tool, currently in development — handling both product direction and architecture.</p>
+      </div>
+
+      <div class="project-card concept">
+        <span class="lang">Web Platform</span>
+        <h3>Paul Bible College Site <em style="font-size:13px; color:#7a7a7a;">(in progress)</em></h3>
+        <p>Website and backend for a bilingual Amharic/English theological college in Hawassa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <h2>Skills</h2>
+    </div>
+    <div class="skill-groups">
+      <div>
+        <h3>Teaching</h3>
+        <ul>
+          <li>Communicative, conversation-first method</li>
+          <li>Patient, learner-centred approach</li>
+          <li>Comfortable with young learners &amp; adults alike</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Technical</h3>
+        <ul>
+          <li>Python, JavaScript, Dart</li>
+          <li>Excel / Google Sheets for data work</li>
+          <li>Daily, fluent use of AI tools (Claude) for research &amp; development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Reach out at <a href="mailto:joelkache.eyu@gmail.com">joelkache.eyu@gmail.com</a> or find more work on <a href="https://github.com/J-Sapphire">GitHub</a>.
+  </footer>
+
+</div>
+
+</body>
+</html>
