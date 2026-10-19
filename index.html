@@ -163,6 +163,31 @@
     background:transparent;
   }
 
+  /* Voice */
+.voice-intro {
+  margin: 24px 0 28px;
+  padding: 16px 0;
+  border-top: 1px solid #ded6c7;
+  border-bottom: 1px solid #ded6c7;
+}
+
+.voice-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #28616a;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+.voice-intro audio {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: 40px;
+}
+
+
   /* Skills */
   .skill-groups{
     display:grid;
@@ -211,6 +236,9 @@
         <svg viewBox="0 0 220 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 8C40 2 80 10 110 6C140 2 180 10 218 5" stroke="#B8863B" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
+        
+
+
       </div>
     </div>
     <div class="contact-line">
@@ -220,6 +248,16 @@
     </div>
   </header>
 
+  
+<div class="voice-intro">
+  <span class="voice-label">A QUICK INTRODUCTION</span>
+  <audio controls preload="metadata">
+    <source src="audio/demo-Kaleb_Kache.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+  </audio>
+</div>
+
+  
   <section>
     <p class="lead">
       Native-level English speaker and 4th-year Information Systems student, currently splitting time between one-on-one English tutoring and building software — including the technical tools that could make teaching itself easier to scale.
